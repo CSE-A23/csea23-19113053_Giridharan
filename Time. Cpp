@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+class time              
+{
+    private:
+    int hr,min,sec;
+    char me[5];
+    public:
+    void get()
+    {
+        cout<<"Enter the time\n";
+        cin>>hr>>min>>sec>>me;
+    }
+    void calculate(time t1,time t2)
+    {
+        int h,m,s;
+        {
+            if(t2.hr>t1.hr)                 
+            {
+                h=t2.hr-t1.hr;
+                m=t2.min-t1.min;
+                if(m<0)
+                {   
+                    --h;                 
+                    m=60+m;
+                }
+                s=t2.sec-t1.sec;
+                if(s<0)
+                {
+                    --m;               
+                    s=60+s;
+                }
+                 if(m<0)
+                {   
+                    --h;                 
+                    m=60+m;
+                }
+            }
+            else                          
+            {
